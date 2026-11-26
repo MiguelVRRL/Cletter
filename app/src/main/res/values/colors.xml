@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Cletter: Lineamientos shadcn/ui + 101 GenAI (Off-White / Deep Maroon / Mid Peach) + Pigment -->
+    <color name="fondo_lienzo">#FAF7F4</color>
+    <color name="fondo_tarjeta">#FFFDFB</color>
+    <color name="fondo_suave">#F3ECE6</color>
+    <color name="fondo_banner_perfil">#7A1F33</color>
+    <color name="borde_sutil">#E6DDD5</color>
+    <color name="borde_fuerte">#D4C7BC</color>
+
+    <color name="marca_primario">#6B1D2E</color>
+    <color name="marca_primario_oscuro">#4E1320</color>
+    <color name="marca_sobre_primario">#FFFDFB</color>
+    <color name="marca_acento">#FFAA82</color>
+    <color name="marca_acento_suave">#FFF0E8</color>
+    <color name="marca_sobre_acento">#3D141C</color>
+
+    <color name="texto_primario">#1F1918</color>
+    <color name="texto_secundario">#574D4A</color>
+    <color name="texto_tenue">#7C6F6B</color>
+
+    <color name="estado_exito">#2E7D5B</color>
+    <color name="estado_exito_suave">#E8F5EE</color>
+    <color name="estado_error">#B91C1C</color>
+    <color name="estado_error_suave">#FEECEC</color>
+
+    <color name="hex_inactivo">#FFFDFB</color>
+    <color name="hex_borde">#E2D7CD</color>
+    <color name="hex_activo">#6B1D2E</color>
+    <color name="hex_repetida">#F97316</color>
+    <color name="hex_pista">#FFAA82</color>
+    <color name="hex_linea">#FFAA82</color>
+    <color name="hex_texto_inactivo">#1F1918</color>
+    <color name="hex_texto_activo">#FFFDFB</color>
+    <color name="hex_texto_repetida">#FFFDFB</color>
+
+    <color name="nav_fondo">#FFFDFB</color>
+    <color name="nav_icono_inactivo">#6E625E</color>
+    <color name="nav_icono_activo">#FFFDFB</color>
+    <color name="nav_hexagono_activo">#6B1D2E</color>
+
+    <color name="blanco">#FFFFFF</color>
+    <color name="negro">#000000</color>
+</resources>

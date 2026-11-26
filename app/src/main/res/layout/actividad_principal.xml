@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_lienzo"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/contenedor_fragmento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/barra_navegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Divisor sutil estilo shadcn -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/borde_sutil"
+        app:layout_constraintBottom_toTopOf="@id/barra_navegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Barra inferior de 4 pestañas con indicador hexagonal en el tab activo -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@color/nav_fondo"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/tab_perfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/nav_perfil"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/hex_tab_perfil"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fondo_hexagono_nav"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ico_tab_perfil"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_perfil"
+                app:tint="@color/nav_icono_inactivo" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tab_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/nav_inicio"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/hex_tab_inicio"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fondo_hexagono_nav"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ico_tab_inicio"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_inicio"
+                app:tint="@color/nav_icono_activo" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tab_archivo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/nav_archivo"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/hex_tab_archivo"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fondo_hexagono_nav"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ico_tab_archivo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_archivo"
+                app:tint="@color/nav_icono_inactivo" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tab_configuracion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/nav_configuracion"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/hex_tab_configuracion"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fondo_hexagono_nav"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ico_tab_configuracion"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_configuracion"
+                app:tint="@color/nav_icono_inactivo" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

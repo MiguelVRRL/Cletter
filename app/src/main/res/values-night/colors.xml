@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modo Oscuro inspirado en Pigment Dark + acentos 101 GenAI -->
+    <color name="fondo_lienzo">#161213</color>
+    <color name="fondo_tarjeta">#211B1D</color>
+    <color name="fondo_suave">#2C2427</color>
+    <color name="fondo_banner_perfil">#4A1623</color>
+    <color name="borde_sutil">#382E32</color>
+    <color name="borde_fuerte">#4D3F45</color>
+
+    <color name="marca_primario">#D95B74</color>
+    <color name="marca_primario_oscuro">#B8425B</color>
+    <color name="marca_sobre_primario">#161213</color>
+    <color name="marca_acento">#FFAA82</color>
+    <color name="marca_acento_suave">#3A2622</color>
+    <color name="marca_sobre_acento">#FFF3EC</color>
+
+    <color name="texto_primario">#F6EFEA</color>
+    <color name="texto_secundario">#CFC3BE</color>
+    <color name="texto_tenue">#9E908B</color>
+
+    <color name="estado_exito">#52B788</color>
+    <color name="estado_exito_suave">#1B3328</color>
+    <color name="estado_error">#EF6C6C</color>
+    <color name="estado_error_suave">#3B1F22</color>
+
+    <color name="hex_inactivo">#241D20</color>
+    <color name="hex_borde">#3D3237</color>
+    <color name="hex_activo">#D95B74</color>
+    <color name="hex_repetida">#FB923C</color>
+    <color name="hex_pista">#FFAA82</color>
+    <color name="hex_linea">#FFAA82</color>
+    <color name="hex_texto_inactivo">#F6EFEA</color>
+    <color name="hex_texto_activo">#161213</color>
+    <color name="hex_texto_repetida">#161213</color>
+
+    <color name="nav_fondo">#1D1719</color>
+    <color name="nav_icono_inactivo">#9E908B</color>
+    <color name="nav_icono_activo">#161213</color>
+    <color name="nav_hexagono_activo">#D95B74</color>
+</resources>

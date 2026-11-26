@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cletter</string>
+
+    <!-- Navigation -->
+    <string name="nav_perfil">Profile</string>
+    <string name="nav_inicio">Home</string>
+    <string name="nav_archivo">Archive</string>
+    <string name="nav_configuracion">Settings</string>
+
+    <!-- Home -->
+    <string name="etiqueta_piso">FLOOR %02d</string>
+    <string name="etiqueta_piso_completo">FLOOR %02d · %s</string>
+    <string name="boton_nivel">Level %d</string>
+    <string name="progreso_piso">%d / 10</string>
+    <string name="estado_todos_completados">All 200 levels completed!</string>
+    <string name="subtitulo_coleccion_actual">Complete 10 levels to conquer this floor</string>
+    <string name="area_cs">Computer Science</string>
+    <string name="area_videojuegos">Video Games</string>
+    <string name="area_mixto">CS &amp; Video Games</string>
+
+    <!-- Gameplay -->
+    <string name="etiqueta_nivel_corto">Level</string>
+    <string name="progreso_puntos">%d / %d</string>
+    <string name="desliza_para_jugar">Swipe across the letters</string>
+    <string name="palabra_repetida">Already found</string>
+    <string name="palabra_muy_corta">Minimum 3 letters</string>
+    <string name="palabra_no_valida">Not in dictionary</string>
+    <string name="palabra_valida_puntos">+%d pts</string>
+    <string name="boton_pista">Hint (%d)</string>
+    <string name="boton_mezclar">Shuffle (%d)</string>
+    <string name="monedas_insuficientes">You need %d coins</string>
+    <string name="sin_pistas_disponibles">No more hints left on this board</string>
+    <string name="tablero_mezclado">Board shuffled</string>
+    <string name="cargando_diccionario">Preparing board…</string>
+
+    <!-- Words dialog -->
+    <string name="titulo_palabras_encontradas">Found words</string>
+    <string name="sin_palabras_aun">You haven\'t found any words in this level yet.</string>
+    <string name="cerrar">Close</string>
+
+    <!-- Victory dialog -->
+    <string name="nivel_superado">Level %d cleared!</string>
+    <string name="piso_conquistado">Floor %02d conquered!</string>
+    <string name="resumen_victoria">Points: %d · Words: %d · +%d coins</string>
+    <string name="desbloqueaste_obra">Unlocked in the Archive:</string>
+    <string name="siguiente_nivel">Level %d</string>
+    <string name="ver_en_archivo">Read story</string>
+    <string name="volver_inicio">Home</string>
+
+    <!-- Archive / Museum -->
+    <string name="titulo_archivo">Floor Archive</string>
+    <string name="subtitulo_archivo">%d of 20 stories conquered</string>
+    <string name="piso_bloqueado">Locked</string>
+    <string name="piso_en_progreso">In progress · %d/10</string>
+    <string name="piso_conquistado_badge">Conquered</string>
+    <string name="aviso_piso_bloqueado">Conquer floor %02d (level %d) to unlock this story.</string>
+    <string name="niveles_del_piso">Levels %d – %d</string>
+    <string name="palabras_clave_piso">Key vocabulary</string>
+
+    <!-- Profile -->
+    <string name="titulo_perfil">Profile</string>
+    <string name="nombre_jugador_defecto">Player101</string>
+    <string name="titulo_estadisticas">Statistics</string>
+    <string name="stat_mas_niveles_dia">Best levels\nin a day</string>
+    <string name="stat_total_dias">Total\nDays</string>
+    <string name="stat_pisos_conquistados">Floors\nConquered</string>
+    <string name="stat_total_palabras">Total\nWords</string>
+    <string name="stat_palabra_larga">Longest\nWord</string>
+    <string name="stat_mejor_palabra">Best\nWord</string>
+    <string name="stat_nivel_actual">Current\nLevel</string>
+    <string name="stat_puntos_totales">Total\nPoints</string>
+    <string name="stat_logros">Achievements</string>
+    <string name="titulo_logros">Achievements</string>
+    <string name="subtitulo_logros">%d of %d unlocked</string>
+    <string name="editar_perfil">Edit profile</string>
+    <string name="hint_nombre_jugador">Your name</string>
+    <string name="elige_avatar">Choose a badge</string>
+    <string name="guardar">Save</string>
+    <string name="cancelar">Cancel</string>
+
+    <!-- Settings -->
+    <string name="titulo_configuracion">Settings</string>
+    <string name="opcion_musica">Music</string>
+    <string name="opcion_sonido">Sound</string>
+    <string name="opcion_vibracion">Haptics</string>
+    <string name="opcion_idioma">Language</string>
+    <string name="idioma_espanol">Español</string>
+    <string name="idioma_ingles">English</string>
+    <string name="opcion_tema">Appearance</string>
+    <string name="tema_sistema">System</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_oscuro">Dark</string>
+    <string name="opcion_tabla_puntos">Scoring table</string>
+    <string name="opcion_reiniciar">Reset progress</string>
+    <string name="opcion_acerca">About Cletter</string>
+    <string name="detalle_tabla_puntos">Base letter value:\n• 1 pt: A, E, I, O, S, N, R, L, T\n• 2 pts: C, D, M, P, U, B, G\n• 3 pts: F, H, V, Y, Q\n• 4 pts: J, Ñ, X, Z, K, W\n\nLength multiplier:\n• 3 letters: ×1.0   • 4 letters: ×1.25\n• 5 letters: ×1.5   • 6 letters: ×2.0\n• 7+ letters: ×2.5 (+0.5 per extra letter)</string>
+    <string name="confirmar_reinicio_titulo">Reset all progress?</string>
+    <string name="confirmar_reinicio_mensaje">You will return to level 1 and your conquered floors, coins, and local statistics will be cleared.</string>
+    <string name="confirmar_reinicio_si">Reset</string>
+    <string name="progreso_reiniciado">Progress reset</string>
+    <string name="acerca_texto">Cletter v1.0\n\nHexagonal word puzzle across 20 floors of Video Games &amp; Computer Science.\n\nApplied data structures:\n• Graph (hexagonal board)\n• Stack (active swipe trail &amp; backtrack)\n• Binary Tree (balanced dictionary)\n• Singly Linked List (level words)\n• Circular Queue (hints &amp; achievements)</string>
+    <string name="logro_desbloqueado_toast">Achievement unlocked: %s</string>
+</resources>

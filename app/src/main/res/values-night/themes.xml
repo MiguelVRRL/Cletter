@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Cletter" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/marca_primario</item>
+        <item name="colorOnPrimary">@color/marca_sobre_primario</item>
+        <item name="colorSecondary">@color/marca_acento</item>
+        <item name="colorOnSecondary">@color/marca_sobre_acento</item>
+        <item name="colorSurface">@color/fondo_tarjeta</item>
+        <item name="colorOnSurface">@color/texto_primario</item>
+        <item name="colorOutline">@color/borde_sutil</item>
+        <item name="android:colorBackground">@color/fondo_lienzo</item>
+        <item name="android:windowBackground">@color/fondo_lienzo</item>
+        <item name="android:statusBarColor">@color/fondo_lienzo</item>
+        <item name="android:navigationBarColor">@color/nav_fondo</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+    </style>
+</resources>

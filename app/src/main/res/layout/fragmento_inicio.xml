@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_lienzo"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="28dp">
+
+        <!-- Cabecera superior con marca y monedas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.06"
+                    android:text="@string/app_name"
+                    android:textColor="@color/marca_primario"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_piso_cabecera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/texto_tenue"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/fondo_pildora"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="14dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_moneda" />
+
+                <TextView
+                    android:id="@+id/txt_monedas_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/texto_primario"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Marco editorial estilo galería (4:5) -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TarjetaShadcn"
+            android:layout_width="244dp"
+            android:layout_height="305dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="22dp"
+            app:strokeColor="@color/borde_fuerte"
+            app:strokeWidth="1.5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/img_portada_inicio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Título y subtítulo del piso actual -->
+        <TextView
+            android:id="@+id/txt_titulo_piso_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/texto_primario"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_subtitulo_piso_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="@color/texto_tenue"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <!-- Barra de progreso del piso (X / 10) -->
+        <FrameLayout
+            android:layout_width="224dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_pildora"
+            android:padding="3dp">
+
+            <ProgressBar
+                android:id="@+id/barra_progreso_piso"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="10"
+                android:progress="0"
+                android:progressDrawable="@drawable/progreso_nivel" />
+
+            <TextView
+                android:id="@+id/txt_progreso_piso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:textColor="@color/texto_primario"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_ayuda_piso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/subtitulo_coleccion_actual"
+            android:textColor="@color/texto_tenue"
+            android:textSize="12sp" />
+
+        <!-- Botón principal Nivel N -->
+        <TextView
+            android:id="@+id/btn_jugar_nivel"
+            android:layout_width="216dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/fondo_boton_primario"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:textColor="@color/marca_sobre_primario"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

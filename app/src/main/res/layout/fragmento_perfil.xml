@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_lienzo"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <!-- Cabecera tipo banner + tarjeta flotante con avatar circular -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:background="@color/fondo_banner_perfil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/titulo_perfil"
+                android:textColor="@color/blanco"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Tarjeta principal de perfil -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/TarjetaShadcn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="110dp"
+                app:cardCornerRadius="22dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp">
+
+                    <!-- Botón editar perfil -->
+                    <FrameLayout
+                        android:id="@+id/btn_editar_perfil"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/fondo_pildora_suave"
+                        android:clickable="true"
+                        android:contentDescription="@string/editar_perfil"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_editar"
+                            app:tint="@color/texto_primario" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="44dp">
+
+                        <TextView
+                            android:id="@+id/txt_nombre_perfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/texto_primario"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_calendario"
+                                app:tint="@color/texto_tenue" />
+
+                            <TextView
+                                android:id="@+id/txt_fecha_perfil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="monospace"
+                                android:textColor="@color/texto_secundario"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Avatar circular superpuesto -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="68dp"
+                app:cardBackgroundColor="@color/marca_primario"
+                app:cardCornerRadius="44dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/marca_acento"
+                app:strokeWidth="4dp">
+
+                <TextView
+                    android:id="@+id/txt_emblema_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:textColor="@color/marca_sobre_primario"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+
+        <!-- Tarjeta de Estadísticas 3x3 -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/TarjetaShadcn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/titulo_estadisticas"
+                    android:textColor="@color/texto_primario"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Fila 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_mas_niveles_dia"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_mas_niveles_dia"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_total_dias"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_total_dias"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_pisos_conquistados"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_pisos"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Fila 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_total_palabras"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_palabras"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_palabra_larga"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_palabra_larga"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_mejor_palabra"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_mejor_palabra"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Fila 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_nivel_actual"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_nivel"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_puntos_totales"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_puntos"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:gravity="center"
+                            android:text="@string/stat_logros"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_stat_logros"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/fondo_pildora_suave"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:textColor="@color/marca_primario"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tarjeta interactiva de Logros -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tarjeta_logros_perfil"
+            style="@style/TarjetaShadcn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fondo_pildora_suave">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_trofeo"
+                        app:tint="@color/marca_primario" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/titulo_logros"
+                        android:textColor="@color/texto_primario"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_resumen_logros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/estado_exito"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:rotation="-90"
+                    android:src="@drawable/ic_chevron_abajo"
+                    app:tint="@color/texto_tenue" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

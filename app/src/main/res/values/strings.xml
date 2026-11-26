@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cletter</string>
+
+    <!-- Navegación -->
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_archivo">Archivo</string>
+    <string name="nav_configuracion">Ajustes</string>
+
+    <!-- Inicio -->
+    <string name="etiqueta_piso">PISO %02d</string>
+    <string name="etiqueta_piso_completo">PISO %02d · %s</string>
+    <string name="boton_nivel">Nivel %d</string>
+    <string name="progreso_piso">%d / 10</string>
+    <string name="estado_todos_completados">¡200 niveles completados!</string>
+    <string name="subtitulo_coleccion_actual">Completa 10 niveles para conquistar este piso</string>
+    <string name="area_cs">Ciencias de la Computación</string>
+    <string name="area_videojuegos">Videojuegos</string>
+    <string name="area_mixto">CS y Videojuegos</string>
+
+    <!-- Juego -->
+    <string name="etiqueta_nivel_corto">Nivel</string>
+    <string name="progreso_puntos">%d / %d</string>
+    <string name="desliza_para_jugar">Desliza sobre las letras</string>
+    <string name="palabra_repetida">Ya encontrada</string>
+    <string name="palabra_muy_corta">Mínimo 3 letras</string>
+    <string name="palabra_no_valida">No está en el diccionario</string>
+    <string name="palabra_valida_puntos">+%d pts</string>
+    <string name="boton_pista">Pista (%d)</string>
+    <string name="boton_mezclar">Mezclar (%d)</string>
+    <string name="monedas_insuficientes">Necesitas %d monedas</string>
+    <string name="sin_pistas_disponibles">No quedan más pistas en este tablero</string>
+    <string name="tablero_mezclado">Tablero mezclado</string>
+    <string name="cargando_diccionario">Preparando tablero…</string>
+
+    <!-- Diálogo de palabras -->
+    <string name="titulo_palabras_encontradas">Palabras encontradas</string>
+    <string name="sin_palabras_aun">Todavía no has formado palabras en este nivel.</string>
+    <string name="cerrar">Cerrar</string>
+
+    <!-- Diálogo de victoria -->
+    <string name="nivel_superado">¡Nivel %d superado!</string>
+    <string name="piso_conquistado">¡Piso %02d conquistado!</string>
+    <string name="resumen_victoria">Puntos: %d · Palabras: %d · +%d monedas</string>
+    <string name="desbloqueaste_obra">Has desbloqueado en el Archivo:</string>
+    <string name="siguiente_nivel">Nivel %d</string>
+    <string name="ver_en_archivo">Ver historia</string>
+    <string name="volver_inicio">Inicio</string>
+
+    <!-- Archivo / Museo -->
+    <string name="titulo_archivo">Archivo de Pisos</string>
+    <string name="subtitulo_archivo">%d de 20 historias conquistadas</string>
+    <string name="piso_bloqueado">Bloqueado</string>
+    <string name="piso_en_progreso">En progreso · %d/10</string>
+    <string name="piso_conquistado_badge">Conquistado</string>
+    <string name="aviso_piso_bloqueado">Conquista el piso %02d (nivel %d) para revelar esta historia.</string>
+    <string name="niveles_del_piso">Niveles %d – %d</string>
+    <string name="palabras_clave_piso">Vocabulario clave</string>
+
+    <!-- Perfil -->
+    <string name="titulo_perfil">Perfil</string>
+    <string name="nombre_jugador_defecto">Jugador101</string>
+    <string name="titulo_estadisticas">Estadísticas</string>
+    <string name="stat_mas_niveles_dia">Más niveles\nen un día</string>
+    <string name="stat_total_dias">Total\nDías</string>
+    <string name="stat_pisos_conquistados">Pisos\nConquistados</string>
+    <string name="stat_total_palabras">Total\nPalabras</string>
+    <string name="stat_palabra_larga">Palabra\nmás larga</string>
+    <string name="stat_mejor_palabra">Mejor\nPalabra</string>
+    <string name="stat_nivel_actual">Nivel\nActual</string>
+    <string name="stat_puntos_totales">Puntos\nTotales</string>
+    <string name="stat_logros">Logros</string>
+    <string name="titulo_logros">Logros</string>
+    <string name="subtitulo_logros">%d de %d desbloqueados</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="hint_nombre_jugador">Tu nombre</string>
+    <string name="elige_avatar">Elige un emblema</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- Configuración -->
+    <string name="titulo_configuracion">Configuración</string>
+    <string name="opcion_musica">Música</string>
+    <string name="opcion_sonido">Sonido</string>
+    <string name="opcion_vibracion">Vibración</string>
+    <string name="opcion_idioma">Idioma</string>
+    <string name="idioma_espanol">Español</string>
+    <string name="idioma_ingles">English</string>
+    <string name="opcion_tema">Apariencia</string>
+    <string name="tema_sistema">Automático</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_oscuro">Oscuro</string>
+    <string name="opcion_tabla_puntos">Tabla de puntos</string>
+    <string name="opcion_reiniciar">Reiniciar progreso</string>
+    <string name="opcion_acerca">Acerca de Cletter</string>
+    <string name="detalle_tabla_puntos">Valor base por letra:\n• 1 pt: A, E, I, O, S, N, R, L, T\n• 2 pts: C, D, M, P, U, B, G\n• 3 pts: F, H, V, Y, Q\n• 4 pts: J, Ñ, X, Z, K, W\n\nMultiplicador por longitud:\n• 3 letras: ×1.0   • 4 letras: ×1.25\n• 5 letras: ×1.5   • 6 letras: ×2.0\n• 7+ letras: ×2.5 (+0.5 por letra extra)</string>
+    <string name="confirmar_reinicio_titulo">¿Reiniciar todo el progreso?</string>
+    <string name="confirmar_reinicio_mensaje">Volverás al nivel 1 y se borrarán tus pisos conquistados, monedas y estadísticas locales.</string>
+    <string name="confirmar_reinicio_si">Reiniciar</string>
+    <string name="progreso_reiniciado">Progreso reiniciado</string>
+    <string name="acerca_texto">Cletter v1.0\n\nRompecabezas de palabras hexagonal sobre 20 pisos de Videojuegos y Ciencias de la Computación.\n\nEstructuras de datos aplicadas:\n• Grafo (tablero hexagonal)\n• Pila (trazo y retroceso)\n• Árbol Binario (diccionario balanceado)\n• Lista Simple (palabras del nivel)\n• Cola Circular (pistas y logros)</string>
+    <string name="logro_desbloqueado_toast">Logro desbloqueado: %s</string>
+</resources>
